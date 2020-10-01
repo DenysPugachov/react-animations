@@ -53,6 +53,7 @@ code {
     background: coral;
 }
 
+/*Animate opacity for orangeSquare */
 .orangeSquare-enter {
     opacity: 0;
 }
@@ -72,8 +73,32 @@ code {
     opacity: 0;
     transition: opacity 1s;
 }
-.orangeSquare-exit-dome {
+.orangeSquare-exit-done {
     opacity: 0;
+}
+
+/* Animate for items */
+.itemAnim-enter {
+    opacity: 0;
+}
+.itemAnim-enter-active {
+    opacity: 1;
+    animation: leftAnim 1000ms ease-out forwards;
+}
+
+/* .itemAnim-enter-done {
+    transform: translateY(-100px);
+} */
+
+.itemAnim-exit {
+    opacity: 1;
+}
+.itemAnim-exit-active {
+    animation: leftAnim 500ms ease-in alternate-reverse;
+}
+.itemAnim-exit-done {
+    opacity: 0;
+    transform: translateY(-100px);
 }
 
 @keyframes square {
@@ -89,5 +114,19 @@ code {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes leftAnim {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(0px);
     }
 }
