@@ -53,6 +53,29 @@ code {
     background: coral;
 }
 
+.orangeSquare-enter {
+    opacity: 0;
+}
+.orangeSquare-enter-active {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+/* .orangeSquare-enter-done {
+    transform: translateY(-100px);
+} */
+
+.orangeSquare-exit {
+    opacity: 1;
+}
+.orangeSquare-exit-active {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.orangeSquare-exit-dome {
+    opacity: 0;
+}
+
 @keyframes square {
     0% {
         opacity: 0;
